@@ -1,0 +1,17 @@
+cd d:\hanherir
+
+# 1. Python paketleri
+pip install -r backend\requirements.txt
+
+# 2. Frontend'i kur ve derle
+cd frontend
+npm install
+npm run build
+cd ..
+
+# 3. İlk sefer için örnek veri (site.db zaten varsa atla)
+cd backend
+python seed.py
+
+# 4. Sunucuyu başlat
+python app.py
